@@ -12,3 +12,21 @@ let wrapAdjective = function(param="*") {
 			return `You are ${param}${adjective}${param}!`
 	}
 }
+
+const Calculator = {
+	add : (x, y) => x+y,
+	subtract : (x, y) => x-y,
+	multiply : (x, y) => x*y,
+	divide : (x, y) => x/y
+}
+
+function actionApplyer (int, arrOfFuncts) {
+	if(arguments[1].length === 0) {
+		return int;
+	}
+	else {
+		return Calculator.divide(Calculator.add(int, 3), 4);
+	}
+}
+
+actionApplyer(13);
